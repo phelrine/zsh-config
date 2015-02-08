@@ -1,13 +1,17 @@
-#
-# Sets Prezto options.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
-
+# -*- mode: sh -*-
 #
 # General
 #
+
+setopt ignore_eof
+fignore=(.o)
+REPORTTIME=5
+
+alias du="du -h"
+alias df="df -h"
+alias su="su -l"
+alias x="exit"
+alias py="python"
 
 # Set case-sensitivity for completion, history lookup, etc.
 # zstyle ':prezto:*:*' case-sensitive 'yes'
