@@ -3,16 +3,6 @@
 # General
 #
 
-setopt ignore_eof
-fignore=(.o)
-REPORTTIME=5
-
-alias du="du -h"
-alias df="df -h"
-alias su="su -l"
-alias x="exit"
-alias py="python"
-
 # Set case-sensitivity for completion, history lookup, etc.
 # zstyle ':prezto:*:*' case-sensitive 'yes'
 
@@ -163,3 +153,19 @@ zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_rsa2' 'id_github'
 
 # Integrate with iTerm2.
 # zstyle ':prezto:module:tmux:iterm' integrate 'yes'
+
+setopt ignore_eof
+fignore=(.o)
+REPORTTIME=5
+
+alias du="du -h"
+alias df="df -h"
+alias su="su -l"
+alias x="exit"
+alias py="python"
+
+RBENV_PATH="${HOME}/.rbenv/bin"
+if [ -d "${RBENV_PATH}" ]; then
+    export PATH="${RBENV_PATH}:${PATH}"
+    eval "$(rbenv init -)"
+fi
