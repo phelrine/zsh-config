@@ -7,6 +7,9 @@ ZSH_CONFIG_HOME=${HOME}/.zsh-config
 
 if [ ! -e "$ZSH_CONFIG_HOME" ]; then
     git clone ${REPOSITORY_URL} ${ZSH_CONFIG_HOME}
+else
+    cd ${ZSH_CONFIG_HOME}
+    git pull
 fi
 
 cd ${ZSH_CONFIG_HOME}
